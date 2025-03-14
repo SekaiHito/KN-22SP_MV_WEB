@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя унікальна HTML-сторінка</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        table {
-            width: 50%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота 3: Flexbox та Box Model</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ласкаво просимо на мою унікальну HTML-сторінку</h1>
-    <h2>Про мене</h2>
-    <p>Привіт! Мене звати Володимир Максимів. Я вивчаю HTML в університеті і мені подобається створювати унікальні веб-сторінки.</p>
+  <header>
+    <h1>Адаптивний дизайн з Flexbox</h1>
+  </header>
 
-    <h2>Мої улюблені речі</h2>
-    <ul>
-        <li>Улюблений колір: [Червоний]</li>
-        <li>Улюблене хобі: [Геймінг]</li>
-        <li>Улюблена їжа: [Шаурма]</li>
-        <li>Улюблений фільм: [Володар Перстнів]</li>
-        <li>Улюблений музичний жанр: [Фентезі]</li>
-        <li>Улюблена книга: [Відьмак]</li>
-        <li>Улюблений вид спорту: [Баскетбол]</li>
-        <li>Улюблена гра: [Metro exodus]</li>
-    </ul>
+  <main>
+    <section class="gallery">
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpLwc50EB8t91wYHU07ZVJedA4N_YexVzDF6lSOJfD6BHr81fxqLYIwQuEWWWTvjA3oVd74urD0YTU7rS01Z5Zsa39kb7_ku5eOdV_Pbuuhp7IeYYKYtxxWMxTM1aVJbwTAELK4IzbtECm/s1600/tumblr_m00fipw2jq1rqqusio1_500_large.png" alt="Зображення 1">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static7.tgcnt.ru/posts/_0/c1/c17396c1db0b592a96d9c59ccd1cf39f.jpg" alt="Зображення 2">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://ideyka.com.ua/files/resized/products/5113.1800x1800w.jpg" alt="Зображення 3">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioKVvMrOTfdbPiVkd34vibYPqtPg5mAoxkA&s" alt="Зображення 4">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://ybis.ru/wp-content/uploads/2023/09/kosmicheskii-drakon-1.webp" alt="Зображення 5">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://img.freepik.com/premium-vector/programmer-with-code-cat-book-coffee-vector-clip-art-illustration_138676-92.jpg" alt="Зображення 6">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpuHEh-qKe9xQnzTNAJ_J7AjmJtnpj-XdDgyAkw6-hNh1trsCxf9bn9bhHZUQH8xndZ5d5NHe66ciVUpPBEtubEclqI9sKQ3r7Yp29Rbr2TlcgvQcsD7l1ZJM3Ae3WP-HiQ7gagtMrXGFe/s1600/%25D0%2590%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25B5-%25D0%25B0%25D0%25BD%25D0%25B3%25D0%25B5%25D0%25BB%25D1%258B-14.jpg" alt="Зображення 7">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="https://cm1.aminoapps.com/7833/bf23cc156f72543264cee8217d67c8df349d6ccb_00.jpg" alt="Зображення 8">
+          <p>Це короткий опис фото, де представлено цікаві елементи.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <h2>Натхненна цитата</h2>
-    <blockquote>
-        "Єдиний спосіб робити велику роботу – це любити те, що робиш." – Стів Джобс
-    </blockquote>
-
-    <h2>Моя невелика таблиця</h2>
-    <table>
-        <tr>
-            <th>Елемент</th>
-            <th>Опис</th>
-        </tr>
-        <tr>
-            <td>Яблуко</td>
-            <td>Солодкий червоний фрукт</td>
-        </tr>
-        <tr>
-            <td>Банан</td>
-            <td>Довгий жовтий фрукт</td>
-        </tr>
-        <tr>
-            <td>Вишня</td>
-            <td>Маленький червоний фрукт</td>
-        </tr>
-    </table>
-    <img src="https://www.google.com/imgres?q=never%20gonna%20give%20you%20up%20gif&imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F89%2F5c%2Fe7%2F895ce751ba0379700381d17a67086931.gif&imgrefurl=https%3A%2F%2Fin.pinterest.com%2Fpin%2Frick-astley-never-gonna-give-you-up-gif-rick-astley-never-gonna-give-you-up-rickroll-discover-and-share-gif--659566307946676446%2F&docid=jbkfUwL_01pCTM&tbnid=gFL4xZyTGJL9lM&vet=12ahUKEwiXwaTN1cKLAxVZKBAIHeT2AGAQM3oECBoQAA..i&w=498&h=427&hcb=2&ved=2ahUKEwiXwaTN1cKLAxVZKBAIHeT2AGAQM3oECBoQAA" alt="Моє фото" width="300">
-
-    <p>Для більшого натхнення відвідайте <a href="https://youtu.be/dQw4w9WgXcQ?si=u_YScN7yot7r-9Jc">цей сайт</a>.</p>
+  <footer>
+    <p>Дякую за увагу!</p>
+  </footer>
 </body>
 </html>
