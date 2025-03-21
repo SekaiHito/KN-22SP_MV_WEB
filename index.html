@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота 4: Вступ до JavaScript</title>
+</head>
+<body>
+  <h1>Лабораторна робота 4: Вступ до JavaScript</h1>
+  
+  <script>
+    
+    console.log("Завдання 1.");
+    let name = prompt("Введіть ваше ім'я:");
+    alert(`Привіт, ${name}! Радий тебе бачити!`);
+    console.log(`Привіт, ${name}! Радий тебе бачити!`);
+
+    
+    console.log("Завдання 2.");
+    let num1 = parseFloat(prompt("Введіть перше число:"));
+    let num2 = parseFloat(prompt("Введіть друге число:"));
+    let variantNumber = 8; 
+    
+    if (variantNumber % 2 === 0) {
+      let sum = num1 + num2;
+      let difference = num1 - num2;
+      alert(`Сума: ${sum}, Різниця: ${difference}`);
+      console.log(`Сума: ${sum}, Різниця: ${difference}`);
+    } else {
+      let product = num1 * num2;
+      let quotient = num2 !== 0 ? num1 / num2 : "Ділення на нуль неможливе";
+      alert(`Добуток: ${product}, Частка: ${quotient}`);
+      console.log(`Добуток: ${product}, Частка: ${quotient}`);
+    }
+
+    
+    console.log("Завдання 3.");
+    let birthYear = parseInt(prompt("Введіть ваш рік народження:"));
+    const currentYear = 2025;
+    const myAge = 20; 
+    let userAge = currentYear - birthYear;
+    let ageDifference = Math.abs(myAge - userAge);
+    let comparison = userAge > myAge ? "старший" : "молодший";
+    alert(`Ваш вік: ${userAge}. Користувач ${comparison} на ${ageDifference} років.`);
+    console.log(`Ваш вік: ${userAge}. Користувач ${comparison} на ${ageDifference} років.`);
+  </script>
+</body>
+</html>
