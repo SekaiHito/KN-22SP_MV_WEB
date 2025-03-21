@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Форма реєстрації</h2>
+    <form id="registrationForm">
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" minlength="6" required>
+
+      <label for="confirmPassword">Підтвердіть пароль:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <label for="age">Вік:</label>
+      <input type="number" id="age" name="age" min="10" required>
+
+      <label>Стать:</label>
+      <div class="gender-container">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Чоловік</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Жінка</label>
+      </div>
+
+      <button type="submit">Зареєструватися</button>
+    </form>
+
+    <p id="errorMessage" class="error"></p>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let name = document.getElementById('name').value.trim();
+      let email = document.getElementById('email').value.trim();
+      let password = document.getElementById('password').value;
+      let confirmPassword = document.getElementById('confirmPassword').value;
+      let age = document.getElementById('age').value;
+      let genderMale = document.getElementById('male').checked;
+      let genderFemale = document.getElementById('female').checked;
+      let errorMessage = "";
+
+      if (!name) errorMessage += "Ім'я є обов'язковим.\n";
+      if (!email.match(/^\S+@\S+\.\S+$/)) errorMessage += "Некоректний email.\n";
+      if (password.length < 6) errorMessage += "Пароль має містити не менше 6 символів.\n";
+      if (password !== confirmPassword) errorMessage += "Паролі не співпадають.\n";
+      if (age < 10) errorMessage += "Вік повинен бути 10 або більше років.\n";
+      if (!genderMale && !genderFemale) errorMessage += "Оберіть стать.\n";
+
+      if (errorMessage) {
+        document.getElementById('errorMessage').innerText = errorMessage;
+      } else {
+        alert("Реєстрація успішна!");
+        document.getElementById('registrationForm').reset();
+        document.getElementById('errorMessage').innerText = "";
+      }
+    });
+  </script>
+</body>
+</html>
